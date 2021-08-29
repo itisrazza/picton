@@ -16,6 +16,7 @@ if (!in_array($log, $knownGood, TRUE)) {
 $file = file_get_contents("/home/backup/$log.log");
 if ($file) {
     header("Content-Type: text/plain");
+    header("Refresh: 2");
     echo $file;
     exit(0);
 }
